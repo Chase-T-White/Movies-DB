@@ -1,0 +1,16 @@
+/* MOVIE CARD */
+
+.movie-card {
+  border-radius: 0.5rem;
+  /* border: 0.4rem solid var(--clr-accent); */
+  border: 0.4rem solid var(--clr-accent);
+  box-shadow: 0 0 0.8rem 0.25rem var(--clr-accent-highlight);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie__img {
+  height: 100%;
+}
