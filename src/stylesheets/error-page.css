@@ -1,0 +1,9 @@
+.error-text {
+  justify-content: center;
+  align-items: center;
+}
+
+.error__title {
+  font-size: 4.8rem;
+  margin-bottom: 2.5rem;
+}

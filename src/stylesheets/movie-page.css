@@ -54,3 +54,14 @@
 .rating__source {
   color: var(--clr-primary);
 }
+
+@media (max-width: 73.5rem) {
+  .movie__container {
+    flex-direction: column;
+  }
+
+  .movie__page-img {
+    width: minmax(50%, 80%);
+    margin: 0 auto;
+  }
+}

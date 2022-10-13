@@ -1,5 +1,6 @@
 @import "movie";
 @import "movie-page";
+@import "error-page";
 
 *,
 *::before,
@@ -136,8 +137,22 @@ form {
 
 label {
   font-size: 1.8rem;
+  font-weight: 600;
   text-transform: capitalize;
   letter-spacing: 0.1rem;
+}
+
+input {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  padding: 0.25em 0.5em;
+  border-radius: 0.5rem;
+  border: none;
+  text-transform: capitalize;
+}
+
+input:focus {
+  outline: 0.2rem solid var(--clr-primary);
 }
 
 /* MOVIES LIST */
@@ -147,4 +162,18 @@ label {
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-template-rows: min-content(100%);
   gap: 2rem;
+}
+
+/* LOADING */
+
+.loading {
+  font-size: 4.8rem;
+  font-weight: 700;
+}
+
+/* ERROR MESSAGE */
+
+.error {
+  font-size: 1.6rem;
+  color: red;
 }
