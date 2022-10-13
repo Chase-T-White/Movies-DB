@@ -1,4 +1,5 @@
 @import "movie";
+@import "movie-page";
 
 *,
 *::before,
@@ -9,12 +10,17 @@
 }
 
 :root {
-  --clr-primary: #ffd85c;
+  --clr-primary-shade: #856108;
+  --clr-primary: #c8920c;
+
   --clr-accent: rgb(208, 255, 251);
 
   --clr-accent-highlight: rgb(0, 205, 241);
 
   --clr-backdrop: #000;
+  --clr-backdrop-light: rgb(32, 32, 32);
+
+  --clr-text-dark: #333;
 
   --clr-white: #fff;
 }
@@ -52,6 +58,22 @@ section {
 
 .fd-column {
   flex-direction: column;
+}
+
+.btn {
+  text-decoration: none;
+  color: var(--clr-white);
+  background: var(--clr-primary);
+  font-size: 1.6rem;
+  padding: 0.5em 1.5em;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  box-shadow: 0.2rem 0.2rem 0.5rem var(--clr-backdrop-light);
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--clr-primary-shade);
 }
 
 /* TITLE & SEARCH */
@@ -123,5 +145,6 @@ label {
 .movies-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-rows: min-content(100%);
   gap: 2rem;
 }

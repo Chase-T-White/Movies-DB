@@ -1,4 +1,5 @@
 import { useGlobalContext } from "../context";
+import { Link } from "react-router-dom";
 import Loading from "../components/Loading";
 import Movie from "../components/Movie";
 
@@ -25,15 +26,19 @@ const Home = () => {
             type='text'
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            {error.show && <div className="error">{error.msg}</div>}
           />
+          {error.show && <div className='error'>{error.msg}</div>}
         </form>
         <div className='movies-list'>
           {loading ? (
             <div className='loading'>Loading...</div>
           ) : (
             movies.map((movie) => {
-              return <Movie key={movie.imdbID} {...movie} />;
+              return (
+                <Link to={`movies/${movie.imdbID}`} key={movie.imdbID}>
+                  <Movie {...movie} />;
+                </Link>
+              );
             })
           )}
         </div>

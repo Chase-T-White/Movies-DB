@@ -9,8 +9,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  height: 100%;
 }
 
 .movie__img {
   height: 100%;
+}
+
+.movie__card-info {
+  color: var(--clr-white);
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1em;
+  position: absolute;
+  bottom: -18%;
+  left: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.movie-card:hover .movie__card-info {
+  transform: translateY(-100%);
+}
+
+.movie__card-title {
+  margin-bottom: 0.75rem;
 }
